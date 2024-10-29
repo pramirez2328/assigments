@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Web Form</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="bu-logo.png" alt="boston university logo" />
+      <h2 id="title">Interactive Web Form</h2>
+    </header>
+    <main>
+      <form>
+        <div id="subcription-form">
+          <div class="input-container">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div class="input-container">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="lastName" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <label for="package">Choose a package:</label>
+            <select name="package" id="package">
+              <option value="">Please choose an option</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+              <option value="platinum">Platinum</option>
+            </select>
+          </div>
+
+          <div class="input-container">
+            <fieldset>
+              <legend>Subcription</legend>
+              <div>
+                <input type="checkbox" id="subcription" name="subcription" />
+                <label for="subcription">montly commitment</label>
+              </div>
+            </fieldset>
+          </div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+      <div id="response" style="display: none"></div>
+    </main>
+    <footer>
+      <p>CS601 -- Web Application Development --</p>
+      <p>Pedro Ramirez</p>
+    </footer>
+    <script src="script.js" async defer></script>
+  </body>
+</html>

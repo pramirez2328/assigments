@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color: #00f0f80b;
+  --text-color: #004a9a;
+  --border-color: #004a9a;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: solid 2px var(--border-color);
+}
+
+img {
+  width: 70px;
+  height: auto;
+}
+
+#title {
+  font-family: serif;
+  color: var(--text-color);
+}
+
+main {
+  width: 50%;
+  margin: 2rem auto;
+}
+
+#subcription-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid 2px var(--border-color);
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.input-container {
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+#name,
+#last-name,
+#email {
+  padding: 0.2rem;
+  border: solid 1px var(--border-color);
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 7px;
+}
+
+select {
+  padding: 0.2rem;
+  border: solid 1px var(--border-color);
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 7px;
+}
+
+fieldset {
+  padding: 0.7rem;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+fieldset div {
+  display: flex;
+  align-items: center;
+}
+
+fieldset label {
+  font-size: 0.8rem;
+  color: var(--text-color);
+  margin-left: 7px;
+}
+
+button {
+  background-color: var(--border-color);
+  font-size: 1.1rem;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: solid 2px var(--border-color);
+  background-color: var(--background-color);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer p {
+  color: var(--text-color);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header img {
+    margin-bottom: 1rem;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  footer p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
