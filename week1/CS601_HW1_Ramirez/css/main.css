@@ -102,6 +102,20 @@ button {
   cursor: pointer;
 }
 
+#response {
+  margin-top: 1.5rem;
+}
+
+.message {
+  color: var(--text-color);
+  font-weight: bold;
+  margin: 0;
+}
+
+.error {
+  color: red;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
