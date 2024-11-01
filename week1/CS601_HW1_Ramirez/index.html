@@ -11,7 +11,7 @@
   </head>
   <body>
     <header>
-      <img src="bu-logo.png" alt="boston university logo" />
+      <img src="./assets/bu-logo.png" alt="boston university logo" />
       <h2 id="title">Interactive Web Form</h2>
     </header>
     <main>
@@ -20,15 +20,18 @@
           <div class="input-container">
             <label for="name">First Name:</label>
             <input type="text" id="name" name="name" />
+            <span class="error">First Name must contain at least 2 alpha characters.</span>
           </div>
           <div class="input-container">
             <label for="last-name">Last Name:</label>
             <input type="text" id="last-name" name="lastName" />
+            <span class="error">Last Name must contain at least 2 alpha characters.</span>
           </div>
 
           <div class="input-container">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" />
+            <span class="error">Please enter a valid email address.</span>
           </div>
 
           <div class="input-container">
@@ -40,26 +43,29 @@
               <option value="gold">Gold</option>
               <option value="platinum">Platinum</option>
             </select>
+            <span class="error">Please choose a package.</span>
           </div>
 
           <div class="input-container">
             <fieldset>
               <legend>Subcription</legend>
               <div>
-                <input type="checkbox" id="subcription" name="subcription" />
-                <label for="subcription">montly commitment</label>
+                <input type="checkbox" id="subscription" name="subscription" />
+                <label for="subscription">montly commitment</label>
               </div>
             </fieldset>
+            <span class="error">You must subscribe to proceed.</span>
           </div>
           <button type="submit">Submit</button>
         </div>
       </form>
-      <div id="response" style="display: none"></div>
+      <div id="summary"></div>
     </main>
+
     <footer>
       <p>CS601 -- Web Application Development --</p>
-      <p>Pedro Ramirez</p>
+      <p>Pedro Ramirez (week 1 - assignment)</p>
     </footer>
-    <script src="./scripts/main.js" async defer></script>
+    <script type="module" src="./scripts/main.js" async defer></script>
   </body>
 </html>

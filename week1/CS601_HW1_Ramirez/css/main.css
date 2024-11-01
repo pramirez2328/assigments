@@ -26,7 +26,7 @@ img {
 }
 
 #title {
-  font-family: serif;
+  font-family: fantasy;
   color: var(--text-color);
 }
 
@@ -46,7 +46,7 @@ main {
 }
 
 .input-container {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 label {
@@ -102,10 +102,6 @@ button {
   cursor: pointer;
 }
 
-#response {
-  margin-top: 1.5rem;
-}
-
 .message {
   color: var(--text-color);
   font-weight: bold;
@@ -114,6 +110,26 @@ button {
 
 .error {
   color: red;
+  font-weight: bold;
+  font-size: 0.8rem;
+  visibility: hidden;
+}
+
+.error.active {
+  visibility: visible;
+}
+
+#summary {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(237, 235, 235);
+  padding: 4rem;
+  font-size: 1.5rem;
+  border: solid 2px var(--border-color);
+  border-radius: 5px;
 }
 
 footer {
