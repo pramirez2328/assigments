@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetching Json</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1 class="title-header">Fruits and Vegetables</h1>
+
+    <!-- Container for displaying JSON data -->
+    <div id="outer-container">
+      <div class="data-container" id="items-container">
+        <!-- Dynamically inserted items will appear here -->
+      </div>
+
+      <!-- Drop zones for dragging and dropping items -->
+      <div class="dropzone-container">
+        <div class="zone">
+          <h4 class="title">Drop fruits here</h4>
+          <div class="dropzone" id="fruits-dropzone"></div>
+          <p id="fruits-count" class="count"></p>
+        </div>
+        <div class="zone">
+          <h4 class="title">Drop vegetables here</h4>
+          <div class="dropzone" id="vegetables-dropzone"></div>
+          <p id="vegetables-count" class="count"></p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
