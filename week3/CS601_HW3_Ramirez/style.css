@@ -1,9 +1,13 @@
 /* General styling */
+html,
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header and footer */
@@ -14,11 +18,17 @@ footer {
   padding: 1rem;
   background-color: #bc0000;
   color: #fff;
+  flex: 0 0 auto; /* Keep header and footer at fixed height */
+}
+
+.title {
+  font-size: 1.5rem;
 }
 
 /* Main layout */
 main {
   display: flex;
+  flex: 1; /* Allow main content to take up remaining space */
   flex-wrap: wrap;
 }
 
@@ -61,8 +71,9 @@ a:hover {
 }
 
 a[data-external='true']::after {
-  content: '↗';
+  content: '📧';
   margin-left: 5px;
+  font-size: 1.2rem;
 }
 
 /* Responsive design */
