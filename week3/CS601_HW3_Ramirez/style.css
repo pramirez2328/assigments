@@ -1,0 +1,89 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header and footer */
+header,
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #bc0000;
+  color: #fff;
+}
+
+/* Main layout */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1;
+  padding: 1rem;
+  background-color: #f4f4f4;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  flex: 3;
+  padding: 1rem;
+}
+
+/* Project cards */
+.project {
+  background-color: #eee;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+/* Pseudo-classes and pseudo-elements */
+.project:hover {
+  transform: scale(1.05);
+}
+
+nav > a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+a:hover {
+  color: #00fbff;
+}
+
+a[data-external='true']::after {
+  content: '↗';
+  margin-left: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  #projects {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header,
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  #projects {
+    grid-template-columns: 1fr;
+  }
+}
