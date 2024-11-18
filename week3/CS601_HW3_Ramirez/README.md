@@ -65,15 +65,11 @@ The project is divided into the following main sections:
 
 ## How to Run
 
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
+1. Navigate to the project directory:
    ```bash
    cd portfolio-project
    ```
-3. Open the `index.html` file in your browser:
+2. Open the `index.html` file in your browser:
    ```bash
    open index.html
    ```
@@ -85,4 +81,4 @@ The project is divided into the following main sections:
 **Pedro Ramirez**
 Front-End Developer
 Email: [prlara23@bu.edu](mailto:prlara23@bu.edu)
-LinkedIn: [Pedro Ramirez](#)
+assignment week #3
