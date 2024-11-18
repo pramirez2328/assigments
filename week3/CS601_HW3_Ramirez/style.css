@@ -16,13 +16,29 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
-  background-color: #bc0000;
-  color: #fff;
-  flex: 0 0 auto; /* Keep header and footer at fixed height */
+  background-color: #00bc9d;
+  flex: 0 0 auto;
+}
+
+#logo {
+  width: 14rem;
+}
+
+.name {
+  font-size: 2rem;
+  color: #00bc9d;
 }
 
 .title {
   font-size: 1.5rem;
+  color: #00bc9d;
+  font-family: fantasy;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Main layout */
@@ -30,20 +46,29 @@ main {
   display: flex;
   flex: 1; /* Allow main content to take up remaining space */
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 aside {
   flex: 1;
-  padding: 1rem;
+  padding: 1.7rem;
   background-color: #f4f4f4;
 }
 
+section {
+  flex: 3;
+  padding: 0 1.7rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Projects grid */
 #projects {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns */
   gap: 1rem;
-  flex: 3;
-  padding: 1rem;
+  height: 100%;
 }
 
 /* Project cards */
@@ -57,17 +82,20 @@ aside {
 
 /* Pseudo-classes and pseudo-elements */
 .project:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
+  border: #00bc9d solid 1px;
+  cursor: pointer;
 }
 
-nav > a {
-  color: #fff;
+nav > a,
+aside > a {
+  color: #000000;
   text-decoration: none;
   margin-right: 1rem;
 }
 
 a:hover {
-  color: #00fbff;
+  color: #006e75;
 }
 
 a[data-external='true']::after {
@@ -77,9 +105,13 @@ a[data-external='true']::after {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   main {
     flex-direction: column;
+  }
+
+  nav {
+    margin-top: 1rem;
   }
 
   #projects {
