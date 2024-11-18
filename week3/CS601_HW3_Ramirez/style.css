@@ -83,8 +83,15 @@ section {
 /* Pseudo-classes and pseudo-elements */
 .project:hover {
   transform: scale(1.02);
-  border: #00bc9d solid 1px;
   cursor: pointer;
+}
+
+.project:nth-child(odd) {
+  background-color: #f9f9f9; /* Light background for odd cards */
+}
+
+.project:focus {
+  outline: 2px solid #00bc9d; /* Highlight the card with a border when use tab */
 }
 
 nav > a,
