@@ -1,7 +1,12 @@
 "use strict";
-class RainyCountry {
-    constructor(name, rainLevel) {
+class Country {
+    constructor(name) {
         this.name = name;
+    }
+}
+class RainyCountry extends Country {
+    constructor(name, rainLevel) {
+        super(name);
         this.rainLevel = rainLevel;
     }
     getInfo(element) {
@@ -9,9 +14,9 @@ class RainyCountry {
         return element;
     }
 }
-class SnowyCountry {
+class SnowyCountry extends Country {
     constructor(name, snowLevel) {
-        this.name = name;
+        super(name);
         this.snowLevel = snowLevel;
     }
     getInfo(element) {
@@ -19,9 +24,9 @@ class SnowyCountry {
         return element;
     }
 }
-class IslandCountry {
+class IslandCountry extends Country {
     constructor(name, landSize) {
-        this.name = name;
+        super(name);
         this.landSize = landSize;
     }
     getInfo(element) {
@@ -37,34 +42,7 @@ const countries = [
     new SnowyCountry('Sweden', 30),
     new IslandCountry('Australia', 2968464),
 ];
-const snowyCountriesList = [];
-/*
-6. Perform the following operations to build the snowyCountriesList:
-a. Create a function to perform the following:
-1) The function must receive a country object of type ICountry (e.g.
-country:ICountry).
-2) It checks the country’s “snowLevel” property
-a) If the property is present in this object, return the country object
-b) Otherwise, return the null value
-b. Use your function to filter the list of countries.
-c. If the object returned by this function is a SnowyCountry, then add this country to
-the snowyCountriesList.
-d. Use type predicates and type assertions where required and necessary in your
-implementations.
-e. Create additional functions as needed (if any).
-7. Construct and render the following information to the DOM (the index.html).
-a. Display all the country information from the countries list.
-b. Display all the snowy country information and the total annual snow level from the snowyCountriesList.*/
-// Type predicate to check if a country is a SnowyCountry
-function isSnowyCountry(country) {
-    return country.snowLevel !== undefined;
-}
-// Filter countries to find SnowyCountry instances
-countries.forEach((country) => {
-    if (isSnowyCountry(country)) {
-        snowyCountriesList.push(country);
-    }
-});
+const snowyCountriesList = countries.filter((country) => country instanceof SnowyCountry);
 // Calculate total snow level for snowy countries
 function calculateTotalSnowLevel(snowyCountries) {
     return snowyCountries.reduce((total, country) => total + country.snowLevel, 0);
@@ -72,7 +50,7 @@ function calculateTotalSnowLevel(snowyCountries) {
 // Render all countries
 function renderAllCountries(countries, container) {
     countries.forEach((country) => {
-        const countryInfo = document.createElement('div');
+        const countryInfo = document.createElement('p');
         country.getInfo(countryInfo);
         container.appendChild(countryInfo);
     });
@@ -81,11 +59,11 @@ function renderAllCountries(countries, container) {
 function renderSnowyCountries(snowyCountries, container) {
     const totalSnowLevel = calculateTotalSnowLevel(snowyCountries);
     snowyCountries.forEach((country) => {
-        const countryInfo = document.createElement('div');
+        const countryInfo = document.createElement('p');
         country.getInfo(countryInfo);
         container.appendChild(countryInfo);
     });
-    const totalSnowInfo = document.createElement('div');
+    const totalSnowInfo = document.createElement('h3');
     totalSnowInfo.innerText = `Total annual snow level: ${totalSnowLevel} inches.`;
     container.appendChild(totalSnowInfo);
 }

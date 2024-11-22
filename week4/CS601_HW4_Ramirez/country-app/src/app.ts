@@ -1,15 +1,19 @@
 interface ICountry {
   name: string;
+  rainLevel?: number;
+  snowLevel?: number;
+  landSize?: number;
   getInfo(element: HTMLElement): HTMLElement;
 }
 
-class RainyCountry implements ICountry {
-  name: string;
-  rainLevel: number;
+abstract class Country implements ICountry {
+  constructor(public name: string) {}
+  abstract getInfo(element: HTMLElement): HTMLElement;
+}
 
-  constructor(name: string, rainLevel: number) {
-    this.name = name;
-    this.rainLevel = rainLevel;
+class RainyCountry extends Country {
+  constructor(name: string, public rainLevel: number) {
+    super(name);
   }
 
   getInfo(element: HTMLElement): HTMLElement {
@@ -18,13 +22,9 @@ class RainyCountry implements ICountry {
   }
 }
 
-class SnowyCountry implements ICountry {
-  name: string;
-  snowLevel: number;
-
-  constructor(name: string, snowLevel: number) {
-    this.name = name;
-    this.snowLevel = snowLevel;
+class SnowyCountry extends Country {
+  constructor(name: string, public snowLevel: number) {
+    super(name);
   }
 
   getInfo(element: HTMLElement): HTMLElement {
@@ -33,13 +33,9 @@ class SnowyCountry implements ICountry {
   }
 }
 
-class IslandCountry implements ICountry {
-  name: string;
-  landSize: number;
-
-  constructor(name: string, landSize: number) {
-    this.name = name;
-    this.landSize = landSize;
+class IslandCountry extends Country {
+  constructor(name: string, public landSize: number) {
+    super(name);
   }
 
   getInfo(element: HTMLElement): HTMLElement {
@@ -57,19 +53,7 @@ const countries: ICountry[] = [
   new IslandCountry('Australia', 2968464),
 ];
 
-const snowyCountriesList: SnowyCountry[] = [];
-
-// Type predicate to check if a country is a SnowyCountry
-function isSnowyCountry(country: ICountry): country is SnowyCountry {
-  return (country as SnowyCountry).snowLevel !== undefined;
-}
-
-// Filter countries to find SnowyCountry instances
-countries.forEach((country) => {
-  if (isSnowyCountry(country)) {
-    snowyCountriesList.push(country);
-  }
-});
+const snowyCountriesList = countries.filter((country) => country instanceof SnowyCountry) as SnowyCountry[];
 
 // Calculate total snow level for snowy countries
 function calculateTotalSnowLevel(snowyCountries: SnowyCountry[]): number {
@@ -79,7 +63,7 @@ function calculateTotalSnowLevel(snowyCountries: SnowyCountry[]): number {
 // Render all countries
 function renderAllCountries(countries: ICountry[], container: HTMLElement): void {
   countries.forEach((country) => {
-    const countryInfo = document.createElement('div');
+    const countryInfo = document.createElement('p');
     country.getInfo(countryInfo);
     container.appendChild(countryInfo);
   });
@@ -89,12 +73,12 @@ function renderAllCountries(countries: ICountry[], container: HTMLElement): void
 function renderSnowyCountries(snowyCountries: SnowyCountry[], container: HTMLElement): void {
   const totalSnowLevel = calculateTotalSnowLevel(snowyCountries);
   snowyCountries.forEach((country) => {
-    const countryInfo = document.createElement('div');
+    const countryInfo = document.createElement('p');
     country.getInfo(countryInfo);
     container.appendChild(countryInfo);
   });
 
-  const totalSnowInfo = document.createElement('div');
+  const totalSnowInfo = document.createElement('h3');
   totalSnowInfo.innerText = `Total annual snow level: ${totalSnowLevel} inches.`;
   container.appendChild(totalSnowInfo);
 }
