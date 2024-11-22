@@ -12,14 +12,12 @@ This project showcases a simple application to display information about various
 
 ```plaintext
 country-app/
-├── node_modules/       # Dependencies installed by npm
 ├── public/             # Public assets for the application
 │   ├── app.js          # JavaScript output generated from TypeScript
 │   ├── index.html      # Main HTML file
 │   └── style.css       # Optional CSS file for styling
 ├── src/                # TypeScript source code
 │   └── app.ts          # Main TypeScript implementation
-├── .gitignore          # Specifies files to ignore in Git
 ├── package.json        # Node.js package metadata
 ├── package-lock.json   # Exact versions of installed dependencies
 └── tsconfig.json       # TypeScript configuration file
