@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header/Header';
 import Inventory from './components/inventoryList/InventoryList';
 import Footer from './components/footer/Footer';
-import AboutUs from './components/aboutUs/AboutUs'; // Add new components here
+import AboutUs from './components/aboutUs/AboutUs';
 import Contact from './components/contact/Contact';
 import PrivacyPolicy from './components/privacyPolicy/PrivacyPolicy';
 

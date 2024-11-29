@@ -2,7 +2,7 @@
 
 ## Overview
 
-TechSphere is a modern React application that provides an intuitive platform to manage inventory and connect with users. This project utilizes React, React Router, and modular components for easy scalability and maintenance.
+TechSphere is a modern React application that provides an intuitive platform to manage inventory. This project utilizes React, React Router, and modular components for easy scalability and maintenance.
 
 ## Features
 
@@ -11,6 +11,7 @@ TechSphere is a modern React application that provides an intuitive platform to 
 - **Contact Form**: Easily get in touch with us.
 - **Privacy Policy**: Understand how we handle your data.
 - **Sticky Footer**: Ensures a consistent layout with a footer at the bottom.
+- **Mobile Friendly**: Dinamically adjust its view to any screeen
 
 ## Folder Structure
 
