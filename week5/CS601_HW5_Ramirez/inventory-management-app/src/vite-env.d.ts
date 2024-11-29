@@ -5,8 +5,3 @@ export interface InventoryItemType {
   qty: number;
   price: number;
 }
-
-declare module '*.png' {
-  const value: string;
-  export default value;
-}

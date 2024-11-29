@@ -1,3 +1,8 @@
+main {
+  margin: 2rem auto;
+  padding-bottom: 14rem;
+}
+
 #inventory-title {
   font-size: 2rem;
   margin-bottom: 1rem;

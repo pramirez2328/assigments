@@ -12,14 +12,14 @@ const InventoryList = () => {
   }, []);
 
   return (
-    <>
+    <main>
       <h1 id='inventory-title'>Inventory</h1>
       <div id='items'>
         {inventory.map((item) => (
           <InventoryItem key={item.SKU} item={item} />
         ))}
       </div>
-    </>
+    </main>
   );
 };
 
