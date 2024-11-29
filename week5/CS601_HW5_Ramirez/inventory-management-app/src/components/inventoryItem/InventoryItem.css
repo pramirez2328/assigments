@@ -6,20 +6,35 @@
   background-color: #f9f9f9;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  width: 25%;
 }
 
 .card-title {
   font-size: 1.25rem;
-  color: #333;
+  color: #01557c;
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .card-content p {
   margin: 6px 0;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #555;
+  text-align: center;
 }
 
 .card-content p strong {
   color: #000;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
 }

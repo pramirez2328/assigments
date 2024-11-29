@@ -24,3 +24,28 @@
   letter-spacing: 3px;
   margin-top: 0;
 }
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 1.25rem;
+  }
+
+  #subtitle {
+    font-size: 0.8rem;
+  }
+
+  #logo {
+    width: 7rem;
+  }
+}
+
+@media (max-width: 515px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #subtitle {
+    font-size: 0.7rem;
+  }
+}
