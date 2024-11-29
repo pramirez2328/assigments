@@ -1,4 +1,4 @@
-import InventoryItem from './InventoryItem';
+import InventoryItem from '../inventoryItem/InventoryItem';
 
 const InventoryList = () => {
   return (

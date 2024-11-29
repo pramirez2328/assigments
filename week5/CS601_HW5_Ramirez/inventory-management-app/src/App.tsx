@@ -1,6 +1,6 @@
-import Header from './components/Header';
-import Inventory from './components/InventoryList';
-import Footer from './components/Footer';
+import Header from './components/header/Header';
+import Inventory from './components/inventoryList/InventoryList';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
