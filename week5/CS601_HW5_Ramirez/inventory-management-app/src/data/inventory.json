@@ -1,0 +1,62 @@
+[
+  {
+    "SKU": "A1001",
+    "name": "Wireless Mouse",
+    "qty": 50,
+    "price": 29.99
+  },
+  {
+    "SKU": "B2002",
+    "name": "Mechanical Keyboard",
+    "qty": 30,
+    "price": 89.95
+  },
+  {
+    "SKU": "C3003",
+    "name": "USB-C Docking Station",
+    "qty": 15,
+    "price": 119.49
+  },
+  {
+    "SKU": "D4004",
+    "name": "Gaming Headset",
+    "qty": 40,
+    "price": 59.99
+  },
+  {
+    "SKU": "E5005",
+    "name": "Portable Hard Drive 1TB",
+    "qty": 25,
+    "price": 49.99
+  },
+  {
+    "SKU": "F6006",
+    "name": "27-inch 4K Monitor",
+    "qty": 10,
+    "price": 329.99
+  },
+  {
+    "SKU": "G7007",
+    "name": "Ergonomic Chair",
+    "qty": 8,
+    "price": 199.99
+  },
+  {
+    "SKU": "H8008",
+    "name": "Smartphone Stand",
+    "qty": 100,
+    "price": 14.99
+  },
+  {
+    "SKU": "I9009",
+    "name": "Laptop Cooling Pad",
+    "qty": 35,
+    "price": 24.99
+  },
+  {
+    "SKU": "J1010",
+    "name": "Bluetooth Speaker",
+    "qty": 20,
+    "price": 45.99
+  }
+]
