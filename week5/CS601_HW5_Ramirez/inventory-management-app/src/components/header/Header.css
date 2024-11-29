@@ -1,0 +1,26 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+#logo {
+  width: 10rem;
+}
+
+#title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(1, 159, 159);
+  margin-bottom: 4px;
+}
+
+#subtitle {
+  font-size: 0.9rem;
+  font-family: fantasy;
+  letter-spacing: 3px;
+  margin-top: 0;
+}
