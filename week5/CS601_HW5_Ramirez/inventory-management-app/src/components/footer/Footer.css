@@ -14,7 +14,7 @@ footer {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -38,7 +38,16 @@ nav a:hover {
   }
 
   nav ul {
-    flex-direction: column;
     margin-top: 1rem;
+  }
+
+  nav ul a {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav ul a {
+    font-size: 0.8rem;
   }
 }

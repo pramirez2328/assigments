@@ -1,50 +1,86 @@
-# React + TypeScript + Vite
+# TechSphere App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+TechSphere is a modern React application that provides an intuitive platform to manage inventory and connect with users. This project utilizes React, React Router, and modular components for easy scalability and maintenance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Inventory Management**: List and display inventory items.
+- **About Us Page**: Learn more about TechSphere.
+- **Contact Form**: Easily get in touch with us.
+- **Privacy Policy**: Understand how we handle your data.
+- **Sticky Footer**: Ensures a consistent layout with a footer at the bottom.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Folder Structure
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```plaintext
+src
+├── assets/                  # Static assets (e.g., images, logos)
+├── components/              # Reusable React components
+│   ├── aboutUs/             # About Us component
+│   ├── contact/             # Contact component
+│   ├── footer/              # Footer component
+│   ├── header/              # Header component
+│   ├── inventoryItem/       # Inventory item component
+│   ├── inventoryList/       # Inventory list component
+│   ├── privacyPolicy/       # Privacy Policy component
+├── data/                    # Data files (e.g., inventory.json)
+├── App.css                  # Global CSS styles
+├── App.tsx                  # Main App component with routing
+├── index.css                # Global styles
+├── main.tsx                 # Application entry point
+├── vite-env.d.ts            # TypeScript definitions for Vite
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Follow these steps to set up and run the project locally:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Download the repository:
+
+   ```bash
+   cd TechSphere
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## Scripts
+
+- **Start Development Server**: `npm run dev`
+- **Build for Production**: `npm run build`
+- **Preview Production Build**: `npm run preview`
+
+## Routing
+
+The application uses React Router for navigation:
+
+| Path              | Component     | Description                 |
+| ----------------- | ------------- | --------------------------- |
+| `/`               | InventoryList | Displays inventory items.   |
+| `/about`          | AboutUs       | Information about the app.  |
+| `/contact`        | Contact       | Contact form for inquiries. |
+| `/privacy-policy` | PrivacyPolicy | Details on data privacy.    |
+
+## Technologies Used
+
+- **React**: Component-based library for building user interfaces.
+- **React Router**: Declarative routing for React.
+- **TypeScript**: Strongly typed JavaScript.
+- **Vite**: Fast development build tool.
+
+## Author
+
+Created by **[Pedro Ramirez](mailto:prlara23@bu.edu)**.
