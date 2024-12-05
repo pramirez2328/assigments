@@ -1,0 +1,82 @@
+[
+  {
+    "SKU": "A1001",
+    "name": "Wireless Mouse",
+    "qty": 50,
+    "price": 29.99,
+    "description": "A compact wireless mouse with ergonomic design and long battery life.",
+    "image": "/inventoryAssets/wireless-mouse.webp"
+  },
+  {
+    "SKU": "B2002",
+    "name": "Mechanical Keyboard",
+    "qty": 30,
+    "price": 89.95,
+    "description": "A high-quality mechanical keyboard with customizable RGB lighting.",
+    "image": "/inventoryAssets/keyboard.webp"
+  },
+  {
+    "SKU": "C3003",
+    "name": "USB-C Docking Station",
+    "qty": 15,
+    "price": 119.49,
+    "description": "A versatile USB-C docking station with multiple ports for all your peripherals.",
+    "image": "/inventoryAssets/docking-station.webp"
+  },
+  {
+    "SKU": "D4004",
+    "name": "Gaming Headset",
+    "qty": 40,
+    "price": 59.99,
+    "description": "A comfortable gaming headset with surround sound and noise-canceling mic.",
+    "image": "/inventoryAssets/headset.webp"
+  },
+  {
+    "SKU": "E5005",
+    "name": "Portable Hard Drive 1TB",
+    "qty": 25,
+    "price": 49.99,
+    "description": "A reliable and portable 1TB hard drive for secure data storage.",
+    "image": "/inventoryAssets/hardDrive.webp"
+  },
+  {
+    "SKU": "F6006",
+    "name": "27-inch 4K Monitor",
+    "qty": 10,
+    "price": 329.99,
+    "description": "A stunning 27-inch 4K monitor with vivid colors and ultra-clear resolution.",
+    "image": "/inventoryAssets/monitor.webp"
+  },
+  {
+    "SKU": "G7007",
+    "name": "Ergonomic Chair",
+    "qty": 8,
+    "price": 199.99,
+    "description": "An ergonomic chair designed for comfort and support during long hours.",
+    "image": "/inventoryAssets/chair.webp"
+  },
+  {
+    "SKU": "H8008",
+    "name": "Smartphone Stand",
+    "qty": 100,
+    "price": 14.99,
+    "description": "A compact and adjustable smartphone stand for easy viewing.",
+    "image": "/inventoryAssets/stand.webp"
+  },
+  {
+    "SKU": "I9009",
+    "name": "Laptop Cooling Pad",
+    "qty": 35,
+    "price": 24.99,
+    "description": "A lightweight laptop cooling pad to keep your device cool and efficient.",
+    "image": "/inventoryAssets/cooling-pad.webp"
+  },
+  {
+    "SKU": "J1010",
+    "name": "Bluetooth Speaker",
+    "qty": 20,
+    "price": 45.99,
+    "description": "A portable Bluetooth speaker with powerful sound and a sleek design.",
+    "image": "/inventoryAssets/speaker.webp"
+  }
+]

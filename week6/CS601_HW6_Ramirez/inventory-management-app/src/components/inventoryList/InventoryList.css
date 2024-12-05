@@ -1,0 +1,17 @@
+main {
+  margin: 2rem auto;
+  padding-bottom: 14rem;
+}
+
+#inventory-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
