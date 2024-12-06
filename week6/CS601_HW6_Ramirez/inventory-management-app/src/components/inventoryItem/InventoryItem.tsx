@@ -4,6 +4,7 @@ import './InventoryItem.css';
 
 const InventoryItem = ({ item }: { item: InventoryItemType }) => {
   return (
+    //pass state to the ProductDetail component
     <Link to={`/product/${item.SKU}`} state={{ item }} className='card'>
       <h3 className='card-title'>{item.name}</h3>
       <div className='card-content'>
